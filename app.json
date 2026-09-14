@@ -18,9 +18,8 @@
   "category": "climate",
   "permissions": [],
   "author": {
-    "name": "Your Name"
+    "name": "Tre Eiler"
   },
-  "support": "mailto:support@example.com",
   "images": {
     "small": "/assets/images/app-small.png",
     "large": "/assets/images/app-large.png",
