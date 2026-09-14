@@ -1,0 +1,9 @@
+{
+  "name": "com.example.tessie",
+  "version": "0.1.0",
+  "description": "Homey app to control Tesla vehicles via Tessie",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"No tests yet\""
+  }
+}

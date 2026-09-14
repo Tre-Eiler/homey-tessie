@@ -1,0 +1,15 @@
+{
+  "title": { "en": "Set seat heating" },
+  "titleFormatted": { "en": "Set [[seat]] heating to [[level]]" },
+  "args": [
+    { "name": "device", "type": "device", "filter": "driver_id=tesla_vehicle" },
+    { "name": "seat", "type": "dropdown", "values": [
+      { "id": "front_left", "label": { "en": "Front left" } },
+      { "id": "front_right", "label": { "en": "Front right" } },
+      { "id": "rear_left", "label": { "en": "Rear left" } },
+      { "id": "rear_center", "label": { "en": "Rear center" } },
+      { "id": "rear_right", "label": { "en": "Rear right" } }
+    ] },
+    { "name": "level", "type": "number", "min": 0, "max": 3 }
+  ]
+}

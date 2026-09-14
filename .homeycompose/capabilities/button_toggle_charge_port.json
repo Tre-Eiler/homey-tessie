@@ -1,0 +1,7 @@
+{
+  "type": "boolean",
+  "title": { "en": "Toggle charge port" },
+  "getable": false,
+  "setable": true,
+  "uiComponent": "button"
+}

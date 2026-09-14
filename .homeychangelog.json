@@ -1,0 +1,17 @@
+{
+  "0.1.1": {
+    "en": "Initial dev release for Homey Pro mini: Tessie token auth, Tesla pairing, climate/charging/lock/frunk/trunk controls, 60s polling, and repair flow."
+  },
+  "0.1.2": {
+    "en": "Fix Configure/settings page so token save works. Refresh logo assets with cleaner branding and proper Homey image dimensions."
+  },
+  "0.1.3": {
+    "en": "Fix pairing crash when Tessie vehicles response is wrapped in an object; use official Tesla logos for app and vehicle images."
+  },
+  "0.1.4": {
+    "en": "Add device control buttons, trunk close safety, thermostat display, vehicle status conditions, and GPS geofence triggers."
+  },
+  "0.1.5": {
+    "en": "Add lock, trunk, window, and charge port toggle controls; add detailed door, window, trunk, frunk, port, and lock conditions."
+  }
+}

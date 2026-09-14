@@ -1,0 +1,152 @@
+{
+  "triggers": [
+    {
+      "id": "entered_geofence",
+      "title": { "en": "The vehicle enters a location" },
+      "titleFormatted": { "en": "The vehicle enters [[latitude]], [[longitude]] within [[radius_feet]] ft" },
+      "args": [
+        { "name": "latitude", "type": "number", "title": { "en": "Latitude" } },
+        { "name": "longitude", "type": "number", "title": { "en": "Longitude" } },
+        { "name": "radius_feet", "type": "number", "title": { "en": "Radius (feet)" }, "min": 1 }
+      ],
+      "tokens": [
+        { "name": "latitude", "type": "number", "title": { "en": "Current latitude" }, "example": 37.4929681 },
+        { "name": "longitude", "type": "number", "title": { "en": "Current longitude" }, "example": -121.9453489 },
+        { "name": "distance_feet", "type": "number", "title": { "en": "Distance (feet)" }, "example": 80 }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "gear_is",
+      "title": { "en": "The vehicle gear is [[gear]]" },
+      "titleFormatted": { "en": "[[device]] gear is [[gear]]" },
+      "args": [
+        { "name": "device", "type": "device" },
+        {
+          "name": "gear",
+          "type": "dropdown",
+          "values": [
+            { "id": "P", "label": { "en": "Park" } },
+            { "id": "R", "label": { "en": "Reverse" } },
+            { "id": "N", "label": { "en": "Neutral" } },
+            { "id": "D", "label": { "en": "Drive" } }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "is_plugged_in",
+      "title": { "en": "The vehicle is plugged in" },
+      "titleFormatted": { "en": "[[device]] is plugged in" },
+      "args": [{ "name": "device", "type": "device" }]
+    },
+    {
+      "id": "is_charging",
+      "title": { "en": "The vehicle is charging" },
+      "titleFormatted": { "en": "[[device]] is charging" },
+      "args": [{ "name": "device", "type": "device" }]
+    },
+    {
+      "id": "is_user_present",
+      "title": { "en": "Someone is in the vehicle" },
+      "titleFormatted": { "en": "Someone is in [[device]]" },
+      "args": [{ "name": "device", "type": "device" }]
+    },
+    {
+      "id": "is_within_radius",
+      "title": { "en": "The vehicle is within [[radius_feet]] ft of [[latitude]], [[longitude]]" },
+      "titleFormatted": { "en": "[[device]] is within [[radius_feet]] ft of [[latitude]], [[longitude]]" },
+      "args": [
+        { "name": "device", "type": "device" },
+        { "name": "latitude", "type": "number", "title": { "en": "Latitude" } },
+        { "name": "longitude", "type": "number", "title": { "en": "Longitude" } },
+        { "name": "radius_feet", "type": "number", "title": { "en": "Radius (feet)" }, "min": 1 }
+      ]
+    },
+    {
+      "id": "lock_is",
+      "title": { "en": "The vehicle is [[state]]" },
+      "titleFormatted": { "en": "[[device]] is [[state]]" },
+      "args": [
+        { "name": "device", "type": "device" },
+        { "name": "state", "type": "dropdown", "values": [
+          { "id": "locked", "label": { "en": "locked" } },
+          { "id": "unlocked", "label": { "en": "unlocked" } }
+        ] }
+      ]
+    },
+    {
+      "id": "door_is",
+      "title": { "en": "The [[door]] door is [[state]]" },
+      "titleFormatted": { "en": "[[device]] [[door]] door is [[state]]" },
+      "args": [
+        { "name": "device", "type": "device" },
+        { "name": "door", "type": "dropdown", "values": [
+          { "id": "driver_front", "label": { "en": "driver front" } },
+          { "id": "passenger_front", "label": { "en": "passenger front" } },
+          { "id": "driver_rear", "label": { "en": "driver rear" } },
+          { "id": "passenger_rear", "label": { "en": "passenger rear" } }
+        ] },
+        { "name": "state", "type": "dropdown", "values": [
+          { "id": "open", "label": { "en": "open" } },
+          { "id": "closed", "label": { "en": "closed" } }
+        ] }
+      ]
+    },
+    {
+      "id": "window_is",
+      "title": { "en": "The [[window]] window is [[state]]" },
+      "titleFormatted": { "en": "[[device]] [[window]] window is [[state]]" },
+      "args": [
+        { "name": "device", "type": "device" },
+        { "name": "window", "type": "dropdown", "values": [
+          { "id": "driver_front", "label": { "en": "driver front" } },
+          { "id": "passenger_front", "label": { "en": "passenger front" } },
+          { "id": "driver_rear", "label": { "en": "driver rear" } },
+          { "id": "passenger_rear", "label": { "en": "passenger rear" } }
+        ] },
+        { "name": "state", "type": "dropdown", "values": [
+          { "id": "open", "label": { "en": "open" } },
+          { "id": "closed", "label": { "en": "closed" } }
+        ] }
+      ]
+    },
+    {
+      "id": "trunk_is",
+      "title": { "en": "The trunk is [[state]]" },
+      "titleFormatted": { "en": "[[device]] trunk is [[state]]" },
+      "args": [
+        { "name": "device", "type": "device" },
+        { "name": "state", "type": "dropdown", "values": [
+          { "id": "open", "label": { "en": "open" } },
+          { "id": "closed", "label": { "en": "closed" } }
+        ] }
+      ]
+    },
+    {
+      "id": "frunk_is",
+      "title": { "en": "The frunk is [[state]]" },
+      "titleFormatted": { "en": "[[device]] frunk is [[state]]" },
+      "args": [
+        { "name": "device", "type": "device" },
+        { "name": "state", "type": "dropdown", "values": [
+          { "id": "open", "label": { "en": "open" } },
+          { "id": "closed", "label": { "en": "closed" } }
+        ] }
+      ]
+    },
+    {
+      "id": "charge_port_is",
+      "title": { "en": "The charge port is [[state]]" },
+      "titleFormatted": { "en": "[[device]] charge port is [[state]]" },
+      "args": [
+        { "name": "device", "type": "device" },
+        { "name": "state", "type": "dropdown", "values": [
+          { "id": "open", "label": { "en": "open" } },
+          { "id": "closed", "label": { "en": "closed" } }
+        ] }
+      ]
+    }
+  ]
+}

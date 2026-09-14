@@ -1,0 +1,57 @@
+{
+  "name": {
+    "en": "Tesla Vehicle"
+  },
+  "class": "car",
+  "capabilities": [
+    "button_lock",
+    "button_unlock",
+    "button_toggle_lock",
+    "button_open_trunk",
+    "button_close_trunk",
+    "button_toggle_trunk",
+    "button_open_frunk",
+    "button_vent_windows",
+    "button_close_windows",
+    "button_toggle_windows",
+    "button_open_charge_port",
+    "button_close_charge_port",
+    "button_toggle_charge_port",
+    "button_start_charging",
+    "button_stop_charging",
+    "climate_active",
+    "target_temperature",
+    "measure_temperature",
+    "charging_active",
+    "measure_power"
+  ],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "cloud"
+  ],
+  "repair": [
+    {
+      "id": "repair_credentials",
+      "template": "credentials_login"
+    }
+  ],
+  "pair": [
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "images": {
+    "small": "/drivers/tesla_vehicle/assets/images/small.png",
+    "large": "/drivers/tesla_vehicle/assets/images/large.png"
+  }
+}

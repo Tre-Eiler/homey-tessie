@@ -1,0 +1,7 @@
+{
+  "type": "boolean",
+  "title": { "en": "Toggle trunk" },
+  "getable": false,
+  "setable": true,
+  "uiComponent": "button"
+}

@@ -1,0 +1,1169 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.example.tessie",
+  "version": "0.1.5",
+  "compatibility": ">=12.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "runtime": "nodejs",
+  "brandColor": "#C62828",
+  "name": {
+    "en": "Tessie for Tesla"
+  },
+  "description": {
+    "en": "Control Tesla vehicles in Homey via Tessie."
+  },
+  "category": "climate",
+  "permissions": [],
+  "author": {
+    "name": "Your Name"
+  },
+  "support": "mailto:support@example.com",
+  "images": {
+    "small": "/assets/images/app-small.png",
+    "large": "/assets/images/app-large.png",
+    "xlarge": "/assets/images/app-xlarge.png"
+  },
+  "flow": {
+    "actions": [
+      {
+        "title": {
+          "en": "Close charge port"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          }
+        ],
+        "id": "close_charge_port"
+      },
+      {
+        "title": {
+          "en": "Close trunk"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          }
+        ],
+        "id": "close_trunk"
+      },
+      {
+        "title": {
+          "en": "Close windows"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          }
+        ],
+        "id": "close_windows"
+      },
+      {
+        "title": {
+          "en": "Lock vehicle"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          }
+        ],
+        "id": "lock_vehicle"
+      },
+      {
+        "title": {
+          "en": "Open charge port"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          }
+        ],
+        "id": "open_charge_port"
+      },
+      {
+        "title": {
+          "en": "Open frunk"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          }
+        ],
+        "id": "open_frunk"
+      },
+      {
+        "title": {
+          "en": "Open trunk"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          }
+        ],
+        "id": "open_trunk"
+      },
+      {
+        "title": {
+          "en": "Set cabin temp"
+        },
+        "titleFormatted": {
+          "en": "Set cabin temp to [[temperature]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          },
+          {
+            "name": "temperature",
+            "type": "number",
+            "min": 15,
+            "max": 28
+          }
+        ],
+        "id": "set_cabin_temp"
+      },
+      {
+        "title": {
+          "en": "Set seat cooling"
+        },
+        "titleFormatted": {
+          "en": "Set [[seat]] cooling to [[level]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          },
+          {
+            "name": "seat",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "front_left",
+                "label": {
+                  "en": "Front left"
+                }
+              },
+              {
+                "id": "front_right",
+                "label": {
+                  "en": "Front right"
+                }
+              },
+              {
+                "id": "rear_left",
+                "label": {
+                  "en": "Rear left"
+                }
+              },
+              {
+                "id": "rear_center",
+                "label": {
+                  "en": "Rear center"
+                }
+              },
+              {
+                "id": "rear_right",
+                "label": {
+                  "en": "Rear right"
+                }
+              }
+            ]
+          },
+          {
+            "name": "level",
+            "type": "number",
+            "min": 0,
+            "max": 3
+          }
+        ],
+        "id": "set_seat_cooling"
+      },
+      {
+        "title": {
+          "en": "Set seat heating"
+        },
+        "titleFormatted": {
+          "en": "Set [[seat]] heating to [[level]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          },
+          {
+            "name": "seat",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "front_left",
+                "label": {
+                  "en": "Front left"
+                }
+              },
+              {
+                "id": "front_right",
+                "label": {
+                  "en": "Front right"
+                }
+              },
+              {
+                "id": "rear_left",
+                "label": {
+                  "en": "Rear left"
+                }
+              },
+              {
+                "id": "rear_center",
+                "label": {
+                  "en": "Rear center"
+                }
+              },
+              {
+                "id": "rear_right",
+                "label": {
+                  "en": "Rear right"
+                }
+              }
+            ]
+          },
+          {
+            "name": "level",
+            "type": "number",
+            "min": 0,
+            "max": 3
+          }
+        ],
+        "id": "set_seat_heating"
+      },
+      {
+        "title": {
+          "en": "Start charging"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          }
+        ],
+        "id": "start_charging"
+      },
+      {
+        "title": {
+          "en": "Start climate"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          }
+        ],
+        "id": "start_climate"
+      },
+      {
+        "title": {
+          "en": "Start steering wheel heater"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          }
+        ],
+        "id": "start_wheel_heater"
+      },
+      {
+        "title": {
+          "en": "Stop charging"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          }
+        ],
+        "id": "stop_charging"
+      },
+      {
+        "title": {
+          "en": "Stop climate"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          }
+        ],
+        "id": "stop_climate"
+      },
+      {
+        "title": {
+          "en": "Stop steering wheel heater"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          }
+        ],
+        "id": "stop_wheel_heater"
+      },
+      {
+        "title": {
+          "en": "Toggle charge port"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          }
+        ],
+        "id": "toggle_charge_port"
+      },
+      {
+        "title": {
+          "en": "Toggle lock"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          }
+        ],
+        "id": "toggle_lock"
+      },
+      {
+        "title": {
+          "en": "Toggle trunk"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          }
+        ],
+        "id": "toggle_trunk"
+      },
+      {
+        "title": {
+          "en": "Toggle windows"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          }
+        ],
+        "id": "toggle_windows"
+      },
+      {
+        "title": {
+          "en": "Unlock vehicle"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          }
+        ],
+        "id": "unlock_vehicle"
+      },
+      {
+        "title": {
+          "en": "Vent windows"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          }
+        ],
+        "id": "vent_windows"
+      },
+      {
+        "title": {
+          "en": "Wake vehicle"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=tesla_vehicle"
+          }
+        ],
+        "id": "wake_vehicle"
+      }
+    ],
+    "triggers": [
+      {
+        "id": "entered_geofence",
+        "title": {
+          "en": "The vehicle enters a location"
+        },
+        "titleFormatted": {
+          "en": "The vehicle enters [[latitude]], [[longitude]] within [[radius_feet]] ft"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tesla_vehicle"
+          },
+          {
+            "name": "latitude",
+            "type": "number",
+            "title": {
+              "en": "Latitude"
+            }
+          },
+          {
+            "name": "longitude",
+            "type": "number",
+            "title": {
+              "en": "Longitude"
+            }
+          },
+          {
+            "name": "radius_feet",
+            "type": "number",
+            "title": {
+              "en": "Radius (feet)"
+            },
+            "min": 1
+          }
+        ],
+        "tokens": [
+          {
+            "name": "latitude",
+            "type": "number",
+            "title": {
+              "en": "Current latitude"
+            },
+            "example": 37.4929681
+          },
+          {
+            "name": "longitude",
+            "type": "number",
+            "title": {
+              "en": "Current longitude"
+            },
+            "example": -121.9453489
+          },
+          {
+            "name": "distance_feet",
+            "type": "number",
+            "title": {
+              "en": "Distance (feet)"
+            },
+            "example": 80
+          }
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "id": "gear_is",
+        "title": {
+          "en": "The vehicle gear is [[gear]]"
+        },
+        "titleFormatted": {
+          "en": "[[device]] gear is [[gear]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tesla_vehicle"
+          },
+          {
+            "name": "device",
+            "type": "device"
+          },
+          {
+            "name": "gear",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "P",
+                "label": {
+                  "en": "Park"
+                }
+              },
+              {
+                "id": "R",
+                "label": {
+                  "en": "Reverse"
+                }
+              },
+              {
+                "id": "N",
+                "label": {
+                  "en": "Neutral"
+                }
+              },
+              {
+                "id": "D",
+                "label": {
+                  "en": "Drive"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "is_plugged_in",
+        "title": {
+          "en": "The vehicle is plugged in"
+        },
+        "titleFormatted": {
+          "en": "[[device]] is plugged in"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tesla_vehicle"
+          },
+          {
+            "name": "device",
+            "type": "device"
+          }
+        ]
+      },
+      {
+        "id": "is_charging",
+        "title": {
+          "en": "The vehicle is charging"
+        },
+        "titleFormatted": {
+          "en": "[[device]] is charging"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tesla_vehicle"
+          },
+          {
+            "name": "device",
+            "type": "device"
+          }
+        ]
+      },
+      {
+        "id": "is_user_present",
+        "title": {
+          "en": "Someone is in the vehicle"
+        },
+        "titleFormatted": {
+          "en": "Someone is in [[device]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tesla_vehicle"
+          },
+          {
+            "name": "device",
+            "type": "device"
+          }
+        ]
+      },
+      {
+        "id": "is_within_radius",
+        "title": {
+          "en": "The vehicle is within [[radius_feet]] ft of [[latitude]], [[longitude]]"
+        },
+        "titleFormatted": {
+          "en": "[[device]] is within [[radius_feet]] ft of [[latitude]], [[longitude]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tesla_vehicle"
+          },
+          {
+            "name": "device",
+            "type": "device"
+          },
+          {
+            "name": "latitude",
+            "type": "number",
+            "title": {
+              "en": "Latitude"
+            }
+          },
+          {
+            "name": "longitude",
+            "type": "number",
+            "title": {
+              "en": "Longitude"
+            }
+          },
+          {
+            "name": "radius_feet",
+            "type": "number",
+            "title": {
+              "en": "Radius (feet)"
+            },
+            "min": 1
+          }
+        ]
+      },
+      {
+        "id": "lock_is",
+        "title": {
+          "en": "The vehicle is [[state]]"
+        },
+        "titleFormatted": {
+          "en": "[[device]] is [[state]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tesla_vehicle"
+          },
+          {
+            "name": "device",
+            "type": "device"
+          },
+          {
+            "name": "state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "locked",
+                "label": {
+                  "en": "locked"
+                }
+              },
+              {
+                "id": "unlocked",
+                "label": {
+                  "en": "unlocked"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "door_is",
+        "title": {
+          "en": "The [[door]] door is [[state]]"
+        },
+        "titleFormatted": {
+          "en": "[[device]] [[door]] door is [[state]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tesla_vehicle"
+          },
+          {
+            "name": "device",
+            "type": "device"
+          },
+          {
+            "name": "door",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "driver_front",
+                "label": {
+                  "en": "driver front"
+                }
+              },
+              {
+                "id": "passenger_front",
+                "label": {
+                  "en": "passenger front"
+                }
+              },
+              {
+                "id": "driver_rear",
+                "label": {
+                  "en": "driver rear"
+                }
+              },
+              {
+                "id": "passenger_rear",
+                "label": {
+                  "en": "passenger rear"
+                }
+              }
+            ]
+          },
+          {
+            "name": "state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "open",
+                "label": {
+                  "en": "open"
+                }
+              },
+              {
+                "id": "closed",
+                "label": {
+                  "en": "closed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "window_is",
+        "title": {
+          "en": "The [[window]] window is [[state]]"
+        },
+        "titleFormatted": {
+          "en": "[[device]] [[window]] window is [[state]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tesla_vehicle"
+          },
+          {
+            "name": "device",
+            "type": "device"
+          },
+          {
+            "name": "window",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "driver_front",
+                "label": {
+                  "en": "driver front"
+                }
+              },
+              {
+                "id": "passenger_front",
+                "label": {
+                  "en": "passenger front"
+                }
+              },
+              {
+                "id": "driver_rear",
+                "label": {
+                  "en": "driver rear"
+                }
+              },
+              {
+                "id": "passenger_rear",
+                "label": {
+                  "en": "passenger rear"
+                }
+              }
+            ]
+          },
+          {
+            "name": "state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "open",
+                "label": {
+                  "en": "open"
+                }
+              },
+              {
+                "id": "closed",
+                "label": {
+                  "en": "closed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "trunk_is",
+        "title": {
+          "en": "The trunk is [[state]]"
+        },
+        "titleFormatted": {
+          "en": "[[device]] trunk is [[state]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tesla_vehicle"
+          },
+          {
+            "name": "device",
+            "type": "device"
+          },
+          {
+            "name": "state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "open",
+                "label": {
+                  "en": "open"
+                }
+              },
+              {
+                "id": "closed",
+                "label": {
+                  "en": "closed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "frunk_is",
+        "title": {
+          "en": "The frunk is [[state]]"
+        },
+        "titleFormatted": {
+          "en": "[[device]] frunk is [[state]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tesla_vehicle"
+          },
+          {
+            "name": "device",
+            "type": "device"
+          },
+          {
+            "name": "state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "open",
+                "label": {
+                  "en": "open"
+                }
+              },
+              {
+                "id": "closed",
+                "label": {
+                  "en": "closed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "charge_port_is",
+        "title": {
+          "en": "The charge port is [[state]]"
+        },
+        "titleFormatted": {
+          "en": "[[device]] charge port is [[state]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tesla_vehicle"
+          },
+          {
+            "name": "device",
+            "type": "device"
+          },
+          {
+            "name": "state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "open",
+                "label": {
+                  "en": "open"
+                }
+              },
+              {
+                "id": "closed",
+                "label": {
+                  "en": "closed"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Tesla Vehicle"
+      },
+      "class": "car",
+      "capabilities": [
+        "button_lock",
+        "button_unlock",
+        "button_toggle_lock",
+        "button_open_trunk",
+        "button_close_trunk",
+        "button_toggle_trunk",
+        "button_open_frunk",
+        "button_vent_windows",
+        "button_close_windows",
+        "button_toggle_windows",
+        "button_open_charge_port",
+        "button_close_charge_port",
+        "button_toggle_charge_port",
+        "button_start_charging",
+        "button_stop_charging",
+        "climate_active",
+        "target_temperature",
+        "measure_temperature",
+        "charging_active",
+        "measure_power"
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "repair": [
+        {
+          "id": "repair_credentials",
+          "template": "credentials_login"
+        }
+      ],
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "images": {
+        "small": "/drivers/tesla_vehicle/assets/images/small.png",
+        "large": "/drivers/tesla_vehicle/assets/images/large.png"
+      },
+      "id": "tesla_vehicle"
+    }
+  ],
+  "capabilities": {
+    "button_close_charge_port": {
+      "type": "boolean",
+      "title": {
+        "en": "Close charge port"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button"
+    },
+    "button_close_trunk": {
+      "type": "boolean",
+      "title": {
+        "en": "Close trunk"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button"
+    },
+    "button_close_windows": {
+      "type": "boolean",
+      "title": {
+        "en": "Close windows"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button"
+    },
+    "button_lock": {
+      "type": "boolean",
+      "title": {
+        "en": "Lock"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button"
+    },
+    "button_open_charge_port": {
+      "type": "boolean",
+      "title": {
+        "en": "Open charge port"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button"
+    },
+    "button_open_frunk": {
+      "type": "boolean",
+      "title": {
+        "en": "Open frunk"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button"
+    },
+    "button_open_trunk": {
+      "type": "boolean",
+      "title": {
+        "en": "Open trunk"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button"
+    },
+    "button_start_charging": {
+      "type": "boolean",
+      "title": {
+        "en": "Start charging"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button"
+    },
+    "button_stop_charging": {
+      "type": "boolean",
+      "title": {
+        "en": "Stop charging"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button"
+    },
+    "button_toggle_charge_port": {
+      "type": "boolean",
+      "title": {
+        "en": "Toggle charge port"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button"
+    },
+    "button_toggle_lock": {
+      "type": "boolean",
+      "title": {
+        "en": "Toggle lock"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button"
+    },
+    "button_toggle_trunk": {
+      "type": "boolean",
+      "title": {
+        "en": "Toggle trunk"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button"
+    },
+    "button_toggle_windows": {
+      "type": "boolean",
+      "title": {
+        "en": "Toggle windows"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button"
+    },
+    "button_unlock": {
+      "type": "boolean",
+      "title": {
+        "en": "Unlock"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button"
+    },
+    "button_vent_windows": {
+      "type": "boolean",
+      "title": {
+        "en": "Vent windows"
+      },
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button"
+    },
+    "charging_active": {
+      "type": "boolean",
+      "title": {
+        "en": "Charging active"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "toggle"
+    },
+    "climate_active": {
+      "type": "boolean",
+      "title": {
+        "en": "Climate active"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "toggle"
+    },
+    "target_temperature": {
+      "type": "number",
+      "title": {
+        "en": "Target temperature"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "thermostat",
+      "units": {
+        "en": "°C"
+      },
+      "min": 15.5,
+      "max": 28,
+      "step": 0.5
+    }
+  }
+}

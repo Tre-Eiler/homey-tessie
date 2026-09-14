@@ -1,0 +1,7 @@
+{
+  "type": "boolean",
+  "title": { "en": "Vent windows" },
+  "getable": false,
+  "setable": true,
+  "uiComponent": "button"
+}
