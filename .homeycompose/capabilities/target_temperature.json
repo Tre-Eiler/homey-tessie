@@ -5,7 +5,7 @@
   "setable": true,
   "uiComponent": "thermostat",
   "units": { "en": "°C" },
-  "min": 15.5,
+  "min": 15,
   "max": 28,
   "step": 0.5
 }

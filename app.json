@@ -136,7 +136,8 @@
             "name": "temperature",
             "type": "number",
             "min": 15,
-            "max": 28
+            "max": 28,
+            "step": 0.5
           }
         ],
         "id": "set_cabin_temp"
@@ -973,7 +974,24 @@
       "repair": [
         {
           "id": "repair_credentials",
-          "template": "credentials_login"
+          "template": "login_credentials",
+          "options": {
+            "title": {
+              "en": "Update Tessie Access Token"
+            },
+            "usernameLabel": {
+              "en": "Tessie Access Token"
+            },
+            "usernamePlaceholder": {
+              "en": "Paste your Tessie access token"
+            },
+            "passwordLabel": {
+              "en": "Not used"
+            },
+            "passwordPlaceholder": {
+              "en": "leave blank"
+            }
+          }
         }
       ],
       "pair": [
@@ -1161,7 +1179,7 @@
       "units": {
         "en": "°C"
       },
-      "min": 15.5,
+      "min": 15,
       "max": 28,
       "step": 0.5
     }

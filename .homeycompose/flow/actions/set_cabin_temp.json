@@ -3,6 +3,6 @@
   "titleFormatted": { "en": "Set cabin temp to [[temperature]]" },
   "args": [
     { "name": "device", "type": "device", "filter": "driver_id=tesla_vehicle" },
-    { "name": "temperature", "type": "number", "min": 15, "max": 28 }
+    { "name": "temperature", "type": "number", "min": 15, "max": 28, "step": 0.5 }
   ]
 }

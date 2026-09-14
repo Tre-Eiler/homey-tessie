@@ -34,7 +34,14 @@
   "repair": [
     {
       "id": "repair_credentials",
-      "template": "credentials_login"
+      "template": "login_credentials",
+      "options": {
+        "title": { "en": "Update Tessie Access Token" },
+        "usernameLabel": { "en": "Tessie Access Token" },
+        "usernamePlaceholder": { "en": "Paste your Tessie access token" },
+        "passwordLabel": { "en": "Not used" },
+        "passwordPlaceholder": { "en": "leave blank" }
+      }
     }
   ],
   "pair": [
